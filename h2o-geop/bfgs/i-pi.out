@@ -61,75 +61,75 @@ Created unix socket with address driver
  @ForceField: Starting the polling thread main loop.
  @SOCKET:   Client asked for connection from . Now hand-shaking.
  @SOCKET:   Handshaking was successful. Added to the client list.
- @SOCKET: 17/03/26-19:03:38 Assigning [ none] request id    0 to client with last-id None (  0/  1 : )
- @SOCKET: 17/03/26-19:03:43 Assigning [ free] request id    1 to client with last-id    0 (  0/  1 : )
- @SOCKET: 17/03/26-19:03:43 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
-Energy differences [ 0.00043748] 1e-08
+ @SOCKET: 17/03/27-13:03:45 Assigning [ none] request id    0 to client with last-id None (  0/  1 : )
+ @SOCKET: 17/03/27-13:03:45 Assigning [ free] request id    1 to client with last-id    0 (  0/  1 : )
+ @SOCKET: 17/03/27-13:03:45 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 0.000437477257463 1e-08
 MaxForces 0.0235548611586 1e-08
 Force Difference 0.100290335778 1e-08
 Position 0.0690101043531 1e-08
- # Average timings at MD step       0. t/step: 3.59030e-02
- @SOCKET: 17/03/26-19:03:43 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
-Energy differences [ 0.00022213] 1e-08
+ # Average timings at MD step       0. t/step: 2.92020e-02
+ @SOCKET: 17/03/27-13:03:45 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 0.000222134670877 1e-08
 MaxForces 0.00199384179045 1e-08
 Force Difference 0.0319084285603 1e-08
 Position 0.0236535156485 1e-08
- # Average timings at MD step       1. t/step: 3.34332e-02
- @SOCKET: 17/03/26-19:03:43 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
-Energy differences [  2.20850323e-06] 1e-08
+ # Average timings at MD step       1. t/step: 1.87120e-02
+ @SOCKET: 17/03/27-13:03:45 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 2.20850322737e-06 1e-08
 MaxForces 0.000684419414214 1e-08
 Force Difference 0.0031597965732 1e-08
 Position 0.00217327016618 1e-08
- # Average timings at MD step       2. t/step: 4.28882e-02
- @SOCKET: 17/03/26-19:03:43 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
-Energy differences [  5.82913435e-07] 1e-08
+ # Average timings at MD step       2. t/step: 1.92420e-02
+ @SOCKET: 17/03/27-13:03:45 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 5.82913434768e-07 1e-08
 MaxForces 0.000774217624789 1e-08
 Force Difference 0.000370122567029 1e-08
 Position 0.00108138215794 1e-08
- # Average timings at MD step       3. t/step: 4.18711e-02
- @SOCKET: 17/03/26-19:03:43 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
-Energy differences [  1.18147072e-06] 1e-08
+ # Average timings at MD step       3. t/step: 1.85769e-02
+ @SOCKET: 17/03/27-13:03:45 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 1.18147072498e-06 1e-08
 MaxForces 0.000283587785025 1e-08
 Force Difference 0.000941802035035 1e-08
 Position 0.00375011404657 1e-08
- # Average timings at MD step       4. t/step: 2.85759e-02
- @SOCKET: 17/03/26-19:03:43 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
-Energy differences [  3.00723408e-08] 1e-08
+ # Average timings at MD step       4. t/step: 8.46013e-01
+ @SOCKET: 17/03/27-13:03:46 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 3.007234075e-08 1e-08
 MaxForces 5.08566158555e-05 1e-08
 Force Difference 0.000301175159835 1e-08
 Position 0.000413368908236 1e-08
- # Average timings at MD step       5. t/step: 3.00870e-02
- @SOCKET: 17/03/26-19:03:43 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
-Energy differences [  9.16894890e-10] 1e-08
+ # Average timings at MD step       5. t/step: 2.94342e-02
+ @SOCKET: 17/03/27-13:03:46 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 9.16894889815e-10 1e-08
 MaxForces 1.20768981311e-06 1e-08
 Force Difference 7.30881963223e-05 1e-08
 Position 4.95506149292e-05 1e-08
- # Average timings at MD step       6. t/step: 2.93469e-02
- @SOCKET: 17/03/26-19:03:43 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
- @SOCKET: 17/03/26-19:03:43 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
-Energy differences [  3.21405203e-11] 1e-08
+ # Average timings at MD step       6. t/step: 2.94049e-02
+ @SOCKET: 17/03/27-13:03:46 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/27-13:03:46 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 3.21405203048e-11 1e-08
 MaxForces 9.48113158418e-07 1e-08
 Force Difference 4.11617462311e-07 1e-08
 Position 9.9751978011e-07 1e-08
- # Average timings at MD step       7. t/step: 4.18298e-02
- @SOCKET: 17/03/26-19:03:44 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
-Energy differences [  5.03661720e-11] 1e-08
+ # Average timings at MD step       7. t/step: 3.79550e-02
+ @SOCKET: 17/03/27-13:03:46 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 5.03661719671e-11 1e-08
 MaxForces 2.25425937023e-08 1e-08
 Force Difference 1.4630664089e-06 1e-08
 Position 3.5767531894e-06 1e-08
- # Average timings at MD step       8. t/step: 3.34311e-02
- @SOCKET: 17/03/26-19:03:44 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
-Energy differences [  1.57500025e-11] 1e-08
+ # Average timings at MD step       8. t/step: 3.42989e-02
+ @SOCKET: 17/03/27-13:03:46 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 1.57500024556e-11 1e-08
 MaxForces 5.89987586219e-10 1e-08
 Force Difference 3.88226470225e-08 1e-08
 Position 1.57499097986e-07 1e-08
- # Average timings at MD step       9. t/step: 2.93028e-02
- @SOCKET: 17/03/26-19:03:44 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
-Energy differences [  5.96541308e-13] 1e-08
+ # Average timings at MD step       9. t/step: 4.18420e-02
+ @SOCKET: 17/03/27-13:03:46 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 5.96541307743e-13 1e-08
 MaxForces 8.47158652051e-12 1e-08
 Force Difference 7.63304916041e-10 1e-08
 Position 9.6739030675e-10 1e-08
-SOFTEXIT CALLED FROM THREAD <_MainThread(MainThread, started 140683446925056)> Geometry optimization converged. Exiting simulation
+SOFTEXIT CALLED FROM THREAD <_MainThread(MainThread, started 140033030403840)> Geometry optimization converged. Exiting simulation
  !W! Soft exit has been requested with message: 'Geometry optimization converged. Exiting simulation'. Cleaning up.
-WRITING CHECKPOINT [('ffsocket', <ipi.inputs.forcefields.InputFFSocket object at 0x7ff352c58cd0>), ('system', <ipi.inputs.system.InputSystem object at 0x7ff352cd9050>)]
+WRITING CHECKPOINT [('ffsocket', <ipi.inputs.forcefields.InputFFSocket object at 0x7f5be2ecfcd0>), ('system', <ipi.inputs.system.InputSystem object at 0x7f5be2f50050>)]
  @SOCKET: Shutting down the driver interface.

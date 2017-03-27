@@ -1,0 +1,990 @@
+
+ ____       ____       ____       ____
+/    \     /    \     /    \     /    \ 
+|  #################################  |
+\__#_/     \____/     \____/     \_#__/
+   #    _        _______  _____    #
+   #   (_)      |_   __ \|_   _|   #      -*-     Development version    -*-
+   #   __  ______ | |__) | | |     #
+   Y  [  ||______||  ___/  | |     #      A Python interface for (ab initio)
+  0 0  | |       _| |_    _| |_    #      (path integral) molecular dynamics.
+   #  [___]     |_____|  |_____|   #
+ __#_       ____       ____       _#__
+/  # \     /    \     /    \     / #  \
+|  #################################  |
+\____/     \____/     \____/     \____/
+
+    
+ # Initializing system object 
+ # Initializing simulation object 
+ !W! Momenta not specified in initialize. Will start with zero velocity if they are not specified in beads.
+Import of PyFFTW unsuccessful, using NumPy library instead
+ # i-PI loaded input file:  /home/gorg/i-pi-dev/examples/lammps/paracetamol-geop/input_lbfgs.xml
+ --- begin input file content ---
+<simulation mode="static" verbosity="medium">
+  <output prefix="simulation_lbfgs">
+    <properties filename="out" stride="1">  [ step, potential ] </properties>
+    <trajectory filename="pos" stride="1">  positions  </trajectory>
+  </output>
+  <total_steps> 2000000 </total_steps>
+  <ffsocket mode="unix" name="lmp" pbc="true">
+      <address> driver </address>  <latency> 1e-4</latency> 
+  </ffsocket>
+  <system>
+    <initialize nbeads="1">
+      <file mode="xyz">  init.xyz </file>
+    </initialize>
+    <forces>
+      <force forcefield="lmp"> </force>
+    </forces>
+    <motion mode="minimize">
+      <optimizer mode="lbfgs">
+        <tolerances> [1e-10, 1e-10, 1e-10 ] </tolerances>
+      </optimizer>
+    </motion>
+  </system>
+</simulation>  ---  end input file content  ---
+Created unix socket with address driver
+ @ForceField: Starting the polling thread main loop.
+ @SOCKET:   Client asked for connection from . Now hand-shaking.
+ @SOCKET:   Handshaking was successful. Added to the client list.
+Energy differences 0.000411426049263 1e-06
+MaxForces 0.0491427260743 1e-06
+Force Difference 0.318079269781 1e-08
+Position 0.0908438562263 1e-06
+ # Average timings at MD step       0. t/step: 4.63290e-01
+Energy differences 9.82284793885e-05 1e-06
+MaxForces 0.022681914952 1e-06
+Force Difference 0.100097629107 1e-08
+Position 0.0465605503 1e-06
+Energy differences 4.18415607482e-05 1e-06
+MaxForces 0.0163949234695 1e-06
+Force Difference 0.0463921525918 1e-08
+Position 0.041345171539 1e-06
+Energy differences 4.71786620041e-05 1e-06
+MaxForces 0.0217433032022 1e-06
+Force Difference 0.0305241032192 1e-08
+Position 0.0524315722115 1e-06
+Energy differences 4.61964545828e-05 1e-06
+MaxForces 0.0111380731794 1e-06
+Force Difference 0.0415037281038 1e-08
+Position 0.0475152433653 1e-06
+Energy differences 6.48727929548e-06 1e-06
+MaxForces 0.023335297318 1e-06
+Force Difference 0.0972467018184 1e-08
+Position 0.0427979643823 1e-06
+Energy differences 2.60820315286e-05 1e-06
+MaxForces 0.00671429684914 1e-06
+Force Difference 0.0648804134588 1e-08
+Position 0.0164954230777 1e-06
+Energy differences 7.8022605311e-06 1e-06
+MaxForces 0.00509798798386 1e-06
+Force Difference 0.0168728622638 1e-08
+Position 0.00961191331737 1e-06
+Energy differences 1.31104474651e-05 1e-06
+MaxForces 0.0109155386303 1e-06
+Force Difference 0.0220385932856 1e-08
+Position 0.0294563133575 1e-06
+Energy differences 9.36436223825e-06 1e-06
+MaxForces 0.0204510418683 1e-06
+Force Difference 0.0484117464545 1e-08
+Position 0.0332177417643 1e-06
+Energy differences 8.53274465172e-06 1e-06
+MaxForces 0.00842559843128 1e-06
+Force Difference 0.0248002823889 1e-08
+Position 0.0121338388508 1e-06
+Energy differences 7.99346342426e-06 1e-06
+MaxForces 0.00586862381459 1e-06
+Force Difference 0.0226284129684 1e-08
+Position 0.0196719459372 1e-06
+Energy differences 5.75179703596e-06 1e-06
+MaxForces 0.00713586812773 1e-06
+Force Difference 0.00868276700165 1e-08
+Position 0.0181941930925 1e-06
+Energy differences 2.92350408695e-06 1e-06
+MaxForces 0.0198228870321 1e-06
+Force Difference 0.0530779037935 1e-08
+Position 0.0496819952506 1e-06
+Energy differences 9.32106539138e-06 1e-06
+MaxForces 0.00425771205825 1e-06
+Force Difference 0.0432105780445 1e-08
+Position 0.0101400886877 1e-06
+Energy differences 2.47477211744e-06 1e-06
+MaxForces 0.00292123145301 1e-06
+Force Difference 0.00934594601776 1e-08
+Position 0.00582408731544 1e-06
+Energy differences 4.15229062834e-06 1e-06
+MaxForces 0.00555416193082 1e-06
+Force Difference 0.00895652418746 1e-08
+Position 0.0164920919627 1e-06
+Energy differences 5.25806225817e-06 1e-06
+MaxForces 0.00900335350685 1e-06
+Force Difference 0.0205435996807 1e-08
+Position 0.0252312760774 1e-06
+Energy differences 5.77049870441e-06 1e-06
+MaxForces 0.00844751028244 1e-06
+Force Difference 0.025351114128 1e-08
+Position 0.0362648972351 1e-06
+Energy differences 4.66927626555e-06 1e-06
+MaxForces 0.00328248610911 1e-06
+Force Difference 0.0116889816675 1e-08
+Position 0.0150244718095 1e-06
+Energy differences 6.61982775033e-06 1e-06
+MaxForces 0.00543358286021 1e-06
+Force Difference 0.0158371507048 1e-08
+Position 0.0323720795776 1e-06
+Energy differences 4.75399524042e-07 1e-06
+MaxForces 0.0169223648563 1e-06
+Force Difference 0.0439994468931 1e-08
+Position 0.0323447888361 1e-06
+Energy differences 4.81722578597e-06 1e-06
+MaxForces 0.00457021338021 1e-06
+Force Difference 0.0266528325773 1e-08
+Position 0.00741504989851 1e-06
+Energy differences 2.6673092264e-06 1e-06
+MaxForces 0.00237000398502 1e-06
+Force Difference 0.0126385240457 1e-08
+Position 0.00788444400482 1e-06
+Energy differences 3.54135091117e-06 1e-06
+MaxForces 0.00471881417179 1e-06
+Force Difference 0.0101961654555 1e-08
+Position 0.0221364028045 1e-06
+Energy differences 4.50927131216e-06 1e-06
+MaxForces 0.005655249876 1e-06
+Force Difference 0.00519458238502 1e-08
+Position 0.0320455974678 1e-06
+Energy differences 6.86124121038e-06 1e-06
+MaxForces 0.00923505392061 1e-06
+Force Difference 0.0169738758443 1e-08
+Position 0.0548895077955 1e-06
+Energy differences 8.52578161652e-07 1e-06
+MaxForces 0.0120041236962 1e-06
+Force Difference 0.0433619303483 1e-08
+Position 0.0568155896344 1e-06
+Energy differences 5.1380777746e-06 1e-06
+MaxForces 0.00348945123385 1e-06
+Force Difference 0.03310124174 1e-08
+Position 0.0230747791719 1e-06
+Energy differences 9.11505669043e-07 1e-06
+MaxForces 0.00127074430305 1e-06
+Force Difference 0.00728176200936 1e-08
+Position 0.00831880999709 1e-06
+Energy differences 1.11446439516e-06 1e-06
+MaxForces 0.00128433302296 1e-06
+Force Difference 0.00379312644055 1e-08
+Position 0.0081865900957 1e-06
+Energy differences 1.80877080295e-06 1e-06
+MaxForces 0.00523872731504 1e-06
+Force Difference 0.0148210426058 1e-08
+Position 0.0188787274794 1e-06
+Energy differences 1.73079004828e-06 1e-06
+MaxForces 0.00374972329771 1e-06
+Force Difference 0.0172096563263 1e-08
+Position 0.0229900687179 1e-06
+Energy differences 9.94647694934e-07 1e-06
+MaxForces 0.00132660691506 1e-06
+Force Difference 0.0077234527978 1e-08
+Position 0.00770414316473 1e-06
+Energy differences 8.9571166175e-07 1e-06
+MaxForces 0.00144133642881 1e-06
+Force Difference 0.00538914136956 1e-08
+Position 0.0112424185029 1e-06
+Energy differences 9.39614154454e-07 1e-06
+MaxForces 0.00282478571661 1e-06
+Force Difference 0.00548363877498 1e-08
+Position 0.0106170744243 1e-06
+Energy differences 9.3334065014e-07 1e-06
+MaxForces 0.00492592932779 1e-06
+Force Difference 0.0124100323721 1e-08
+Position 0.0180993101292 1e-06
+Energy differences 7.19719771405e-07 1e-06
+MaxForces 0.00221148699584 1e-06
+Force Difference 0.0133121336264 1e-08
+Position 0.00382644975288 1e-06
+Energy differences 3.90376671695e-07 1e-06
+MaxForces 0.00194300987569 1e-06
+Force Difference 0.00263893887958 1e-08
+Position 0.00234621325089 1e-06
+Energy differences 1.15312754657e-06 1e-06
+MaxForces 0.0018521693146 1e-06
+Force Difference 0.00462639742866 1e-08
+Position 0.0103935931876 1e-06
+Energy differences 5.79153523598e-07 1e-06
+MaxForces 0.00508879706722 1e-06
+Force Difference 0.0115896767961 1e-08
+Position 0.00906107690905 1e-06
+Energy differences 9.16431084164e-07 1e-06
+MaxForces 0.00270205703649 1e-06
+Force Difference 0.00587712126707 1e-08
+Position 0.0118746624661 1e-06
+Energy differences 9.63780528648e-07 1e-06
+MaxForces 0.000858284594798 1e-06
+Force Difference 0.00572256753432 1e-08
+Position 0.0171043095957 1e-06
+Energy differences 6.61208468714e-07 1e-06
+MaxForces 0.00322711345524 1e-06
+Force Difference 0.00863884949376 1e-08
+Position 0.0152038186305 1e-06
+Energy differences 7.05214028133e-07 1e-06
+MaxForces 0.00192132191117 1e-06
+Force Difference 0.00602461457293 1e-08
+Position 0.0112321758146 1e-06
+Energy differences 6.7696574143e-07 1e-06
+MaxForces 0.0018517825094 1e-06
+Force Difference 0.00633961086983 1e-08
+Position 0.0110167949732 1e-06
+Energy differences 6.22125123676e-07 1e-06
+MaxForces 0.00239943554978 1e-06
+Force Difference 0.00870743388363 1e-08
+Position 0.0142978426304 1e-06
+Energy differences 5.42556655217e-07 1e-06
+MaxForces 0.00164660195465 1e-06
+Force Difference 0.00396687045665 1e-08
+Position 0.00610796376539 1e-06
+Energy differences 7.29569690978e-07 1e-06
+MaxForces 0.00170310593351 1e-06
+Force Difference 0.00649344717015 1e-08
+Position 0.0146203641262 1e-06
+Energy differences 2.48933148188e-07 1e-06
+MaxForces 0.00293309541115 1e-06
+Force Difference 0.0101889289129 1e-08
+Position 0.0112867618381 1e-06
+Energy differences 3.88845435684e-07 1e-06
+MaxForces 0.00132775164598 1e-06
+Force Difference 0.0049095848688 1e-08
+Position 0.0051227101918 1e-06
+Energy differences 6.38745998798e-07 1e-06
+MaxForces 0.00154263499692 1e-06
+Force Difference 0.00619234512505 1e-08
+Position 0.0167420265191 1e-06
+Energy differences 5.3447468206e-07 1e-06
+MaxForces 0.00169596739624 1e-06
+Force Difference 0.00226637120376 1e-08
+Position 0.0168145777833 1e-06
+Energy differences 5.06716345858e-07 1e-06
+MaxForces 0.00651106789325 1e-06
+Force Difference 0.00933901104813 1e-08
+Position 0.0233222868895 1e-06
+Energy differences 7.63682126463e-07 1e-06
+MaxForces 0.00131931483209 1e-06
+Force Difference 0.00817401956758 1e-08
+Position 0.0230881397004 1e-06
+Energy differences 4.25098753764e-07 1e-06
+MaxForces 0.000933731911424 1e-06
+Force Difference 0.00478428665289 1e-08
+Position 0.00813554235644 1e-06
+Energy differences 4.25176744111e-07 1e-06
+MaxForces 0.00200097590402 1e-06
+Force Difference 0.00337771775839 1e-08
+Position 0.0088458147616 1e-06
+Energy differences 5.19655807781e-07 1e-06
+MaxForces 0.00415634610762 1e-06
+Force Difference 0.00972194558648 1e-08
+Position 0.0178054849084 1e-06
+Energy differences 7.1280821852e-07 1e-06
+MaxForces 0.00179903041257 1e-06
+Force Difference 0.00666931562623 1e-08
+Position 0.0107189871381 1e-06
+Energy differences 8.31204546512e-07 1e-06
+MaxForces 0.00130985217979 1e-06
+Force Difference 0.0054589686299 1e-08
+Position 0.0145169937031 1e-06
+Energy differences 6.99232665987e-07 1e-06
+MaxForces 0.00299316080397 1e-06
+Force Difference 0.00455992656669 1e-08
+Position 0.0175177999891 1e-06
+Energy differences 3.35286903503e-07 1e-06
+MaxForces 0.00405427143778 1e-06
+Force Difference 0.0138665698609 1e-08
+Position 0.0260473227283 1e-06
+Energy differences 6.18805813137e-07 1e-06
+MaxForces 0.000685478290551 1e-06
+Force Difference 0.00965405857744 1e-08
+Position 0.00225934517641 1e-06
+Energy differences 2.47496241067e-07 1e-06
+MaxForces 0.000943971307844 1e-06
+Force Difference 0.00295531144585 1e-08
+Position 0.00152599054216 1e-06
+Energy differences 4.31377022861e-07 1e-06
+MaxForces 0.00169435055459 1e-06
+Force Difference 0.0034323405278 1e-08
+Position 0.00803888536641 1e-06
+Energy differences 5.19171028236e-07 1e-06
+MaxForces 0.00389094275231 1e-06
+Force Difference 0.0106992248197 1e-08
+Position 0.0220068927206 1e-06
+Energy differences 6.97453417378e-07 1e-06
+MaxForces 0.00142058593595 1e-06
+Force Difference 0.00702036091637 1e-08
+Position 0.0130624659231 1e-06
+Energy differences 7.35908403717e-07 1e-06
+MaxForces 0.00141695604252 1e-06
+Force Difference 0.00556534267948 1e-08
+Position 0.0193322781422 1e-06
+Energy differences 5.40011268436e-07 1e-06
+MaxForces 0.00243663966995 1e-06
+Force Difference 0.00349747453224 1e-08
+Position 0.017576075323 1e-06
+Energy differences 4.27590326688e-09 1e-06
+MaxForces 0.0061030189308 1e-06
+Force Difference 0.0165764424758 1e-08
+Position 0.0312478781257 1e-06
+Energy differences 7.88638386254e-07 1e-06
+MaxForces 0.00166956042143 1e-06
+Force Difference 0.0118987765504 1e-08
+Position 0.00456008562892 1e-06
+Energy differences 2.77704595713e-07 1e-06
+MaxForces 0.000978466006483 1e-06
+Force Difference 0.00331339347858 1e-08
+Position 0.00217172281204 1e-06
+Energy differences 5.40489669588e-07 1e-06
+MaxForces 0.00174237606931 1e-06
+Force Difference 0.00338905684225 1e-08
+Position 0.00747662884786 1e-06
+Energy differences 6.08648507146e-07 1e-06
+MaxForces 0.00483112167319 1e-06
+Force Difference 0.00679265094485 1e-08
+Position 0.0186521124292 1e-06
+Energy differences 5.76626226168e-07 1e-06
+MaxForces 0.00201228008037 1e-06
+Force Difference 0.00830895400445 1e-08
+Position 0.0272336801752 1e-06
+Energy differences 3.49437975036e-07 1e-06
+MaxForces 0.000748913693897 1e-06
+Force Difference 0.00430721044689 1e-08
+Position 0.00343913174601 1e-06
+Energy differences 2.79100073622e-07 1e-06
+MaxForces 0.00127884496638 1e-06
+Force Difference 0.00336018030987 1e-08
+Position 0.00386411410286 1e-06
+Energy differences 1.31256015729e-07 1e-06
+MaxForces 0.00331700599887 1e-06
+Force Difference 0.00759975143656 1e-08
+Position 0.00740249682478 1e-06
+Energy differences 1.98483020773e-07 1e-06
+MaxForces 0.00102845080844 1e-06
+Force Difference 0.00431209920645 1e-08
+Position 0.00147522403287 1e-06
+Energy differences 1.94768341329e-07 1e-06
+MaxForces 0.000915350860112 1e-06
+Force Difference 0.00372138455493 1e-08
+Position 0.00441209006417 1e-06
+Energy differences 1.58800496071e-07 1e-06
+MaxForces 0.00124598884129 1e-06
+Force Difference 0.00143502858878 1e-08
+Position 0.00566418510771 1e-06
+Energy differences 3.36989618075e-07 1e-06
+MaxForces 0.0029198695729 1e-06
+Force Difference 0.00311375424706 1e-08
+Position 0.0133557538375 1e-06
+Energy differences 1.71771831946e-07 1e-06
+MaxForces 0.00230338085003 1e-06
+Force Difference 0.00606022632685 1e-08
+Position 0.00888759323036 1e-06
+Energy differences 2.04265646113e-07 1e-06
+MaxForces 0.000891414543663 1e-06
+Force Difference 0.00372355337401 1e-08
+Position 0.00706108487466 1e-06
+Energy differences 1.30189209396e-07 1e-06
+MaxForces 0.000715941148327 1e-06
+Force Difference 0.00272743115791 1e-08
+Position 0.00440949884766 1e-06
+Energy differences 1.98845990377e-07 1e-06
+MaxForces 0.00154079961029 1e-06
+Force Difference 0.00244549144684 1e-08
+Position 0.00731814465781 1e-06
+Energy differences 2.73390548562e-07 1e-06
+MaxForces 0.00292669614097 1e-06
+Force Difference 0.00520429944994 1e-08
+Position 0.015842528079 1e-06
+Energy differences 2.62008399073e-07 1e-06
+MaxForces 0.00138178965906 1e-06
+Force Difference 0.00549753493851 1e-08
+Position 0.01282551739 1e-06
+Energy differences 2.42389262348e-07 1e-06
+MaxForces 0.000767702173737 1e-06
+Force Difference 0.00305163993169 1e-08
+Position 0.00644483345217 1e-06
+Energy differences 2.41323367581e-07 1e-06
+MaxForces 0.000805033942937 1e-06
+Force Difference 0.0030479377603 1e-08
+Position 0.00764654697157 1e-06
+Energy differences 2.22392607315e-07 1e-06
+MaxForces 0.00258357165501 1e-06
+Force Difference 0.00517176274903 1e-08
+Position 0.0114134249054 1e-06
+Energy differences 2.89559463006e-07 1e-06
+MaxForces 0.000900354833823 1e-06
+Force Difference 0.00351974156416 1e-08
+Position 0.0107646328703 1e-06
+Energy differences 3.93163797258e-07 1e-06
+MaxForces 0.000724973893385 1e-06
+Force Difference 0.00446357262384 1e-08
+Position 0.0190567273901 1e-06
+Energy differences 3.1864447216e-07 1e-06
+MaxForces 0.00200807446727 1e-06
+Force Difference 0.00448322483094 1e-08
+Position 0.0137713193857 1e-06
+Energy differences 4.23373714196e-07 1e-06
+MaxForces 0.00203765291233 1e-06
+Force Difference 0.00186490095644 1e-08
+Position 0.0172492018787 1e-06
+Energy differences 7.47283344227e-07 1e-06
+MaxForces 0.00302796164667 1e-06
+Force Difference 0.00677457266169 1e-08
+Position 0.043353883877 1e-06
+Energy differences 4.0701226143e-07 1e-06
+MaxForces 0.00176964087204 1e-06
+Force Difference 0.00860788483274 1e-08
+Position 0.0244163187376 1e-06
+Energy differences 2.44265742701e-07 1e-06
+MaxForces 0.000776879880312 1e-06
+Force Difference 0.00328591074922 1e-08
+Position 0.00256994607281 1e-06
+Energy differences 3.31731909738e-07 1e-06
+MaxForces 0.00143627347351 1e-06
+Force Difference 0.00340935534082 1e-08
+Position 0.00906426852474 1e-06
+Energy differences 2.4072949545e-07 1e-06
+MaxForces 0.00193819365292 1e-06
+Force Difference 0.00722270396741 1e-08
+Position 0.0226820628071 1e-06
+Energy differences 2.88841401179e-07 1e-06
+MaxForces 0.00122245253633 1e-06
+Force Difference 0.00537747102785 1e-08
+Position 0.00975752655419 1e-06
+ # Average timings at MD step     100. t/step: 1.48387e-01
+Energy differences 3.05373766047e-07 1e-06
+MaxForces 0.00108659922615 1e-06
+Force Difference 0.00326294497306 1e-08
+Position 0.0106119211263 1e-06
+Energy differences 3.75837463105e-07 1e-06
+MaxForces 0.00252270869887 1e-06
+Force Difference 0.00400020302748 1e-08
+Position 0.0188228046666 1e-06
+Energy differences 5.09804180436e-07 1e-06
+MaxForces 0.00178507455968 1e-06
+Force Difference 0.00668073357005 1e-08
+Position 0.0349857310231 1e-06
+Energy differences 5.36259095929e-07 1e-06
+MaxForces 0.00160344686626 1e-06
+Force Difference 0.00519634359378 1e-08
+Position 0.0190042776217 1e-06
+Energy differences 4.71379864837e-07 1e-06
+MaxForces 0.001208805676 1e-06
+Force Difference 0.00481491027249 1e-08
+Position 0.0237514564869 1e-06
+Energy differences 3.37356099758e-07 1e-06
+MaxForces 0.0020240231869 1e-06
+Force Difference 0.00492051983998 1e-08
+Position 0.0218870355907 1e-06
+Energy differences 3.95215555102e-07 1e-06
+MaxForces 0.00078890296333 1e-06
+Force Difference 0.00448714972813 1e-08
+Position 0.0230046692886 1e-06
+Energy differences 3.34745455727e-07 1e-06
+MaxForces 0.00128371094956 1e-06
+Force Difference 0.00430051696354 1e-08
+Position 0.0193235039563 1e-06
+Energy differences 3.34788375296e-07 1e-06
+MaxForces 0.00290734921773 1e-06
+Force Difference 0.00697838341354 1e-08
+Position 0.0210476988109 1e-06
+Energy differences 2.94036473724e-07 1e-06
+MaxForces 0.00153069113293 1e-06
+Force Difference 0.0039531526276 1e-08
+Position 0.0126667903237 1e-06
+Energy differences 3.11067585494e-07 1e-06
+MaxForces 0.000996869843773 1e-06
+Force Difference 0.00421719960651 1e-08
+Position 0.0230726078359 1e-06
+Energy differences 1.95313124284e-07 1e-06
+MaxForces 0.00226999519793 1e-06
+Force Difference 0.00575863225213 1e-08
+Position 0.0215213482487 1e-06
+Energy differences 3.36964834331e-07 1e-06
+MaxForces 0.00111889918081 1e-06
+Force Difference 0.0033962880809 1e-08
+Position 0.0254615285787 1e-06
+Energy differences 3.4669638586e-07 1e-06
+MaxForces 0.000911437712475 1e-06
+Force Difference 0.0040504446048 1e-08
+Position 0.0281543082227 1e-06
+Energy differences 1.59009937516e-07 1e-06
+MaxForces 0.00293546893302 1e-06
+Force Difference 0.00716485139517 1e-08
+Position 0.0204916582974 1e-06
+Energy differences 2.170465563e-07 1e-06
+MaxForces 0.000903728022672 1e-06
+Force Difference 0.00393610633474 1e-08
+Position 0.00232946181552 1e-06
+Energy differences 2.7685862286e-07 1e-06
+MaxForces 0.00121251455305 1e-06
+Force Difference 0.00369296607739 1e-08
+Position 0.0102657381719 1e-06
+Energy differences 2.08358340393e-07 1e-06
+MaxForces 0.00152075423169 1e-06
+Force Difference 0.00199195780066 1e-08
+Position 0.0142116527122 1e-06
+Energy differences 4.80900428902e-08 1e-06
+MaxForces 0.00331104637271 1e-06
+Force Difference 0.00905007474105 1e-08
+Position 0.0219591302922 1e-06
+Energy differences 2.70058882233e-07 1e-06
+MaxForces 0.000544183253038 1e-06
+Force Difference 0.00725029156434 1e-08
+Position 0.00193835344566 1e-06
+Energy differences 7.18530057585e-08 1e-06
+MaxForces 0.000499931018462 1e-06
+Force Difference 0.00157375863431 1e-08
+Position 0.00180435570926 1e-06
+Energy differences 1.25815592732e-07 1e-06
+MaxForces 0.00100866486593 1e-06
+Force Difference 0.00161634416621 1e-08
+Position 0.00258942405679 1e-06
+Energy differences 5.4034553696e-08 1e-06
+MaxForces 0.00320867374383 1e-06
+Force Difference 0.00627142316261 1e-08
+Position 0.00487352586401 1e-06
+Energy differences 1.30527840927e-07 1e-06
+MaxForces 0.000944887917332 1e-06
+Force Difference 0.00431302840763 1e-08
+Position 0.00153377822156 1e-06
+Energy differences 6.62963752403e-08 1e-06
+MaxForces 0.000511298324178 1e-06
+Force Difference 0.00217617875099 1e-08
+Position 0.00212671555167 1e-06
+Energy differences 6.56995769302e-08 1e-06
+MaxForces 0.000865317273158 1e-06
+Force Difference 0.0014062447586 1e-08
+Position 0.00355089018839 1e-06
+Energy differences 1.27301077804e-07 1e-06
+MaxForces 0.00109193370849 1e-06
+Force Difference 0.00107516241184 1e-08
+Position 0.00535771055294 1e-06
+Energy differences 9.09418752096e-08 1e-06
+MaxForces 0.00239382700113 1e-06
+Force Difference 0.00434235162655 1e-08
+Position 0.00534094436484 1e-06
+Energy differences 1.64924993669e-07 1e-06
+MaxForces 0.000791713777408 1e-06
+Force Difference 0.00315503809914 1e-08
+Position 0.00737296191045 1e-06
+Energy differences 9.39999934335e-08 1e-06
+MaxForces 0.000554019153794 1e-06
+Force Difference 0.00216931902492 1e-08
+Position 0.00397756159861 1e-06
+Energy differences 1.57968431864e-07 1e-06
+MaxForces 0.00149605730426 1e-06
+Force Difference 0.00283231498851 1e-08
+Position 0.00520371442315 1e-06
+Energy differences 9.67815591994e-08 1e-06
+MaxForces 0.000979984070881 1e-06
+Force Difference 0.00400578292008 1e-08
+Position 0.00537563848852 1e-06
+Energy differences 9.48203404995e-08 1e-06
+MaxForces 0.000782529349912 1e-06
+Force Difference 0.00259225663603 1e-08
+Position 0.00259492469943 1e-06
+Energy differences 1.22884545899e-07 1e-06
+MaxForces 0.000679905528724 1e-06
+Force Difference 0.00338305732833 1e-08
+Position 0.0033859327038 1e-06
+Energy differences 7.42492806551e-08 1e-06
+MaxForces 0.000791181680383 1e-06
+Force Difference 0.00167399259975 1e-08
+Position 0.00174219656252 1e-06
+Energy differences 8.95229906622e-08 1e-06
+MaxForces 0.000420666266253 1e-06
+Force Difference 0.00220475084067 1e-08
+Position 0.00342010039734 1e-06
+Energy differences 6.28758252089e-08 1e-06
+MaxForces 0.00114252993077 1e-06
+Force Difference 0.0037401905398 1e-08
+Position 0.00522415463692 1e-06
+Energy differences 6.79589193878e-08 1e-06
+MaxForces 0.00044780082964 1e-06
+Force Difference 0.00257578332247 1e-08
+Position 0.00153819894111 1e-06
+Energy differences 5.01619189457e-08 1e-06
+MaxForces 0.000466395542874 1e-06
+Force Difference 0.00148989495734 1e-08
+Position 0.00197484474113 1e-06
+Energy differences 2.24062437146e-08 1e-06
+MaxForces 0.000551442467111 1e-06
+Force Difference 0.00100254046264 1e-08
+Position 0.0016311768054 1e-06
+Energy differences 3.74326833204e-08 1e-06
+MaxForces 0.000887785800491 1e-06
+Force Difference 0.00292713573561 1e-08
+Position 0.00447178935219 1e-06
+Energy differences 5.24218906159e-08 1e-06
+MaxForces 0.000482927228786 1e-06
+Force Difference 0.0022853347487 1e-08
+Position 0.000974167159736 1e-06
+Energy differences 3.58525692155e-08 1e-06
+MaxForces 0.000715773321336 1e-06
+Force Difference 0.00109019332406 1e-08
+Position 0.00103514138992 1e-06
+Energy differences 4.95816372119e-08 1e-06
+MaxForces 0.00104071370253 1e-06
+Force Difference 0.0011472220839 1e-08
+Position 0.00214050545146 1e-06
+Energy differences 3.31909902569e-08 1e-06
+MaxForces 0.00249839514628 1e-06
+Force Difference 0.00496306274964 1e-08
+Position 0.00544712087175 1e-06
+Energy differences 8.33919967629e-08 1e-06
+MaxForces 0.000451459832446 1e-06
+Force Difference 0.0032939278811 1e-08
+Position 0.00117950957011 1e-06
+Energy differences 4.22438599455e-08 1e-06
+MaxForces 0.000554661777789 1e-06
+Force Difference 0.00158227518272 1e-08
+Position 0.00124166788873 1e-06
+Energy differences 3.40858325197e-08 1e-06
+MaxForces 0.000766072214677 1e-06
+Force Difference 0.000734979080507 1e-08
+Position 0.00221820637253 1e-06
+Energy differences 2.91677744034e-08 1e-06
+MaxForces 0.00136223236806 1e-06
+Force Difference 0.00150010935155 1e-08
+Position 0.00405855164567 1e-06
+Energy differences 4.4378103109e-09 1e-06
+MaxForces 0.00059746735977 1e-06
+Force Difference 0.00210125062521 1e-08
+Position 0.00323095831878 1e-06
+Energy differences 2.16110036207e-08 1e-06
+MaxForces 0.000295475433122 1e-06
+Force Difference 0.000979365836292 1e-08
+Position 0.0029853814278 1e-06
+Energy differences 3.39108416618e-08 1e-06
+MaxForces 0.000375002295415 1e-06
+Force Difference 0.00106916502805 1e-08
+Position 0.00369149676773 1e-06
+Energy differences 2.78108306315e-09 1e-06
+MaxForces 0.00126951009948 1e-06
+Force Difference 0.00315693641583 1e-08
+Position 0.00587670139935 1e-06
+Energy differences 3.54279012536e-08 1e-06
+MaxForces 0.000479883031735 1e-06
+Force Difference 0.00274438351846 1e-08
+Position 0.000904132638702 1e-06
+Energy differences 1.31858164498e-08 1e-06
+MaxForces 0.000359549407613 1e-06
+Force Difference 0.000523254871111 1e-08
+Position 0.000563062479268 1e-06
+Energy differences 3.51166614003e-08 1e-06
+MaxForces 0.00049284114434 1e-06
+Force Difference 0.000858618069649 1e-08
+Position 0.00143909017374 1e-06
+Energy differences 2.64967989924e-08 1e-06
+MaxForces 0.00111847541547 1e-06
+Force Difference 0.00295220583057 1e-08
+Position 0.00464906583742 1e-06
+Energy differences 4.34205773121e-08 1e-06
+MaxForces 0.000314580806764 1e-06
+Force Difference 0.00213608050954 1e-08
+Position 0.00180264090084 1e-06
+Energy differences 1.48434710016e-08 1e-06
+MaxForces 0.000311070802267 1e-06
+Force Difference 0.000995577966729 1e-08
+Position 0.00233731283119 1e-06
+Energy differences 3.00796994701e-08 1e-06
+MaxForces 0.000321540077831 1e-06
+Force Difference 0.000634083263538 1e-08
+Position 0.0031115530946 1e-06
+Energy differences 2.98994455236e-08 1e-06
+MaxForces 0.000814620022912 1e-06
+Force Difference 0.00222832542259 1e-08
+Position 0.00435498870067 1e-06
+Energy differences 3.14696870472e-08 1e-06
+MaxForces 0.000338823728917 1e-06
+Force Difference 0.0015212655597 1e-08
+Position 0.00261751601691 1e-06
+Energy differences 2.93502041483e-08 1e-06
+MaxForces 0.000280413956987 1e-06
+Force Difference 0.00128391267888 1e-08
+Position 0.00204589003381 1e-06
+Energy differences 3.23357867017e-08 1e-06
+MaxForces 0.000677891243712 1e-06
+Force Difference 0.00136407626455 1e-08
+Position 0.00197986914173 1e-06
+Energy differences 3.18007958675e-08 1e-06
+MaxForces 0.000424447206389 1e-06
+Force Difference 0.00185579027825 1e-08
+Position 0.00293353239685 1e-06
+Energy differences 2.89922605624e-08 1e-06
+MaxForces 0.000277803937075 1e-06
+Force Difference 0.000939827002111 1e-08
+Position 0.00153753227649 1e-06
+Energy differences 3.78842211879e-08 1e-06
+MaxForces 0.000525783322752 1e-06
+Force Difference 0.00207061810796 1e-08
+Position 0.0033459794545 1e-06
+Energy differences 1.90792478531e-08 1e-06
+MaxForces 0.000562631740072 1e-06
+Force Difference 0.00213115999767 1e-08
+Position 0.00157788226416 1e-06
+Energy differences 1.9825537062e-08 1e-06
+MaxForces 0.000485586046105 1e-06
+Force Difference 0.000649164550019 1e-08
+Position 0.00098814918208 1e-06
+Energy differences 5.0977403581e-08 1e-06
+MaxForces 0.0003687976078 1e-06
+Force Difference 0.00145337718072 1e-08
+Position 0.004871176952 1e-06
+Energy differences 1.91446057125e-08 1e-06
+MaxForces 0.00129903676476 1e-06
+Force Difference 0.00290603869412 1e-08
+Position 0.00463421542759 1e-06
+Energy differences 2.3144702975e-08 1e-06
+MaxForces 0.000414139340291 1e-06
+Force Difference 0.00162087422589 1e-08
+Position 0.000894864260548 1e-06
+Energy differences 1.66612702378e-08 1e-06
+MaxForces 0.000113158265823 1e-06
+Force Difference 0.000960478383227 1e-08
+Position 0.00134747943702 1e-06
+Energy differences 5.19713153971e-09 1e-06
+MaxForces 0.000156081763814 1e-06
+Force Difference 0.000244141709031 1e-08
+Position 0.000944489700261 1e-06
+Energy differences 1.68472678613e-08 1e-06
+MaxForces 0.000312194958707 1e-06
+Force Difference 0.000499710674296 1e-08
+Position 0.00300519482453 1e-06
+Energy differences 2.15547072205e-09 1e-06
+MaxForces 0.000369032130345 1e-06
+Force Difference 0.00114477790436 1e-08
+Position 0.0014255699216 1e-06
+Energy differences 1.55763160196e-08 1e-06
+MaxForces 0.00019279416477 1e-06
+Force Difference 0.000556995451672 1e-08
+Position 0.00228697702683 1e-06
+Energy differences 3.81568605323e-09 1e-06
+MaxForces 0.000262084897208 1e-06
+Force Difference 0.000983338212591 1e-08
+Position 0.00324695057167 1e-06
+Energy differences 1.6507916395e-08 1e-06
+MaxForces 0.000777103038769 1e-06
+Force Difference 0.00199016420169 1e-08
+Position 0.00297095706177 1e-06
+Energy differences 1.22530333192e-08 1e-06
+MaxForces 0.000180927717712 1e-06
+Force Difference 0.00120918659533 1e-08
+Position 0.000857456599809 1e-06
+Energy differences 3.37921683413e-09 1e-06
+MaxForces 0.000116189324604 1e-06
+Force Difference 0.000567504152065 1e-08
+Position 0.000589494904252 1e-06
+Energy differences 4.69320461383e-09 1e-06
+MaxForces 0.000261549062168 1e-06
+Force Difference 0.000434574049827 1e-08
+Position 0.000437521035986 1e-06
+Energy differences 7.18194100857e-09 1e-06
+MaxForces 0.000288330730621 1e-06
+Force Difference 0.000842222488616 1e-08
+Position 0.000833349746522 1e-06
+Energy differences 5.50316834533e-09 1e-06
+MaxForces 0.000137094634956 1e-06
+Force Difference 0.000622393788376 1e-08
+Position 0.000851100216401 1e-06
+Energy differences 5.26794933439e-09 1e-06
+MaxForces 0.00017950516755 1e-06
+Force Difference 0.000498761375228 1e-08
+Position 0.00125574495994 1e-06
+Energy differences 4.28639526234e-09 1e-06
+MaxForces 0.000356715369105 1e-06
+Force Difference 0.000594329213957 1e-08
+Position 0.00110900795134 1e-06
+Energy differences 5.05139532286e-09 1e-06
+MaxForces 0.000178354116754 1e-06
+Force Difference 0.000517750068176 1e-08
+Position 0.000929034192889 1e-06
+Energy differences 8.01719263199e-10 1e-06
+MaxForces 0.000111209113813 1e-06
+Force Difference 0.000512638754364 1e-08
+Position 0.000868886227486 1e-06
+Energy differences 5.17721424134e-09 1e-06
+MaxForces 0.000105193260273 1e-06
+Force Difference 0.000357410296224 1e-08
+Position 0.000775606551031 1e-06
+Energy differences 5.24259087392e-09 1e-06
+MaxForces 0.000452515262604 1e-06
+Force Difference 0.000928617842436 1e-08
+Position 0.00156049081929 1e-06
+Energy differences 1.89880010534e-09 1e-06
+MaxForces 0.000199728225277 1e-06
+Force Difference 0.00110916996809 1e-08
+Position 0.0008975991377 1e-06
+Energy differences 2.03332576471e-09 1e-06
+MaxForces 7.638619501e-05 1e-06
+Force Difference 0.000338925070183 1e-08
+Position 0.000160736192523 1e-06
+Energy differences 3.14962497611e-09 1e-06
+MaxForces 7.68325593461e-05 1e-06
+Force Difference 0.00027827750803 1e-08
+Position 0.000262082510038 1e-06
+Energy differences 4.03504469351e-09 1e-06
+MaxForces 0.000349400109655 1e-06
+Force Difference 0.000648426873831 1e-08
+Position 0.00122176071067 1e-06
+Energy differences 6.00877073098e-09 1e-06
+MaxForces 0.000309068758453 1e-06
+Force Difference 0.000453490217408 1e-08
+Position 0.00205748999674 1e-06
+Energy differences 1.78194460805e-08 1e-06
+MaxForces 0.000492814700001 1e-06
+Force Difference 0.000763203777874 1e-08
+Position 0.00358775070638 1e-06
+Energy differences 7.09952198349e-09 1e-06
+MaxForces 0.000239063122304 1e-06
+Force Difference 0.000614646724818 1e-08
+Position 0.00191932583442 1e-06
+Energy differences 6.04735723164e-09 1e-06
+MaxForces 0.000121798762272 1e-06
+Force Difference 0.000327919028786 1e-08
+Position 0.00124612059212 1e-06
+Energy differences 7.65187231563e-09 1e-06
+MaxForces 0.000363483973256 1e-06
+Force Difference 0.000926203848802 1e-08
+Position 0.00303039748399 1e-06
+Energy differences 2.05567648945e-08 1e-06
+MaxForces 0.000450938177122 1e-06
+Force Difference 0.00126246065318 1e-08
+Position 0.00109292321266 1e-06
+ # Average timings at MD step     200. t/step: 1.63357e-02
+Energy differences 7.31542850602e-10 1e-06
+MaxForces 0.000391658079666 1e-06
+Force Difference 8.74717545037e-05 1e-08
+Position 0.00010935397738 1e-06
+Energy differences 2.79067954856e-10 1e-06
+MaxForces 0.000377987355364 1e-06
+Force Difference 2.23019351817e-05 1e-08
+Position 2.65943646891e-05 1e-06
+Energy differences 2.41838732234e-09 1e-06
+MaxForces 0.000179638699193 1e-06
+Force Difference 0.000901572058719 1e-08
+Position 0.000986823018671 1e-06
+Energy differences 3.35002580766e-08 1e-06
+MaxForces 0.000202231628675 1e-06
+Force Difference 0.000132324764458 1e-08
+Position 0.000295273255643 1e-06
+Energy differences 1.35308472822e-08 1e-06
+MaxForces 0.000830779789595 1e-06
+Force Difference 0.00136910120737 1e-08
+Position 0.00250775110359 1e-06
+Energy differences 7.72861187825e-09 1e-06
+MaxForces 0.000101668082511 1e-06
+Force Difference 0.0014409921618 1e-08
+Position 0.000531197074642 1e-06
+Energy differences 2.87195094789e-10 1e-06
+MaxForces 9.19788504975e-05 1e-06
+Force Difference 2.91629550547e-05 1e-08
+Position 4.84095413107e-05 1e-06
+Energy differences 2.36646666152e-10 1e-06
+MaxForces 9.31076807666e-05 1e-06
+Force Difference 1.06296007743e-05 1e-08
+Position 5.09926901717e-05 1e-06
+Energy differences 2.76280422845e-10 1e-06
+MaxForces 8.0894758859e-05 1e-06
+Force Difference 3.36010704584e-05 1e-08
+Position 4.66409837943e-05 1e-06
+Energy differences 7.50800656021e-09 1e-06
+MaxForces 8.61434740677e-05 1e-06
+Force Difference 0.000434221109199 1e-08
+Position 0.00268329604345 1e-06
+Energy differences 2.84639203527e-09 1e-06
+MaxForces 8.13856601742e-05 1e-06
+Force Difference 0.000235739629529 1e-08
+Position 0.000575339638512 1e-06
+Energy differences 7.98139275296e-09 1e-06
+MaxForces 0.000323394848146 1e-06
+Force Difference 0.000692586655754 1e-08
+Position 0.0015263479791 1e-06
+Energy differences 1.68347535773e-09 1e-06
+MaxForces 0.00034172986772 1e-06
+Force Difference 0.00100203341057 1e-08
+Position 0.000779314877382 1e-06
+Energy differences 1.72578984714e-09 1e-06
+MaxForces 0.000116562453556 1e-06
+Force Difference 0.000365373170415 1e-08
+Position 0.000243002168355 1e-06
+Energy differences 2.08384266648e-09 1e-06
+MaxForces 7.81338493456e-05 1e-06
+Force Difference 0.000323872957952 1e-08
+Position 0.000258718233088 1e-06
+Energy differences 1.96280445786e-09 1e-06
+MaxForces 0.000128403363576 1e-06
+Force Difference 0.000173675803028 1e-08
+Position 0.000633297547951 1e-06
+Energy differences 3.17640930225e-10 1e-06
+MaxForces 0.000378793879725 1e-06
+Force Difference 0.000716038966967 1e-08
+Position 0.000853068920977 1e-06
+Energy differences 1.30464582887e-09 1e-06
+MaxForces 6.1669907941e-05 1e-06
+Force Difference 0.000538047859868 1e-08
+Position 0.000183095946422 1e-06
+Energy differences 4.14677280708e-10 1e-06
+MaxForces 2.06291704326e-05 1e-06
+Force Difference 0.000119159797767 1e-08
+Position 8.14577790909e-05 1e-06
+Energy differences 6.23914623438e-10 1e-06
+MaxForces 5.18142900628e-05 1e-06
+Force Difference 0.000131155235805 1e-08
+Position 0.000268274016529 1e-06
+Energy differences 5.15286284475e-10 1e-06
+MaxForces 4.46174586929e-05 1e-06
+Force Difference 6.82752937993e-05 1e-08
+Position 0.000278929160274 1e-06
+Energy differences 2.04253080421e-10 1e-06
+MaxForces 0.000176191127191 1e-06
+Force Difference 0.000232125877987 1e-08
+Position 0.000209486228595 1e-06
+Energy differences 3.63565577643e-10 1e-06
+MaxForces 5.28076479956e-05 1e-06
+Force Difference 0.000169103796811 1e-08
+Position 0.000153876987536 1e-06
+Energy differences 2.48938089586e-10 1e-06
+MaxForces 3.03494910737e-05 1e-06
+Force Difference 0.000100660948324 1e-08
+Position 0.000112221481249 1e-06
+Energy differences 2.38591711665e-10 1e-06
+MaxForces 5.12933900215e-05 1e-06
+Force Difference 6.45661595853e-05 1e-08
+Position 0.00015423392389 1e-06
+Energy differences 1.8592777179e-10 1e-06
+MaxForces 0.000121026154182 1e-06
+Force Difference 0.000171260555891 1e-08
+Position 0.000200136985899 1e-06
+Energy differences 2.11207552836e-10 1e-06
+MaxForces 5.04039131394e-05 1e-06
+Force Difference 0.00024806185163 1e-08
+Position 0.000208467417851 1e-06
+Energy differences 1.27177674641e-10 1e-06
+MaxForces 1.44630531096e-05 1e-06
+Force Difference 7.25621241387e-05 1e-08
+Position 4.15554340574e-05 1e-06
+Energy differences 1.07150915224e-10 1e-06
+MaxForces 3.53104211949e-05 1e-06
+Force Difference 9.22441259403e-05 1e-08
+Position 5.49773807119e-05 1e-06
+Energy differences 2.1506879333e-10 1e-06
+MaxForces 5.20468110317e-05 1e-06
+Force Difference 7.57066716868e-05 1e-08
+Position 0.000145198106939 1e-06
+Energy differences 7.99624075287e-11 1e-06
+MaxForces 0.00013786464187 1e-06
+Force Difference 0.000232578525088 1e-08
+Position 0.000433826916531 1e-06
+Energy differences 3.21438761719e-10 1e-06
+MaxForces 5.01381841399e-05 1e-06
+Force Difference 0.000185180748919 1e-08
+Position 0.000226243615955 1e-06
+Energy differences 1.66775953464e-10 1e-06
+MaxForces 2.19863840663e-05 1e-06
+Force Difference 0.000121558643682 1e-08
+Position 0.000202540403009 1e-06
+Energy differenc

@@ -1,0 +1,23 @@
+<simulation mode="static" verbosity="medium">
+  <output prefix="simulation_bfgstrm">
+    <properties filename="out" stride="1">  [ step, potential ] </properties>
+    <trajectory filename="pos" stride="1">  positions  </trajectory>
+  </output>
+  <total_steps> 2000000 </total_steps>
+  <ffsocket mode="unix" name="lmp" pbc="true">
+      <address> driver </address>  <latency> 1e-4</latency> 
+  </ffsocket>
+  <system>
+    <initialize nbeads="1">
+      <file mode="xyz">  init.xyz </file>
+    </initialize>
+    <forces>
+      <force forcefield="lmp"> </force>
+    </forces>
+    <motion mode="minimize">
+      <optimizer mode="bfgstrm">
+        <tolerances> [1e-10, 1e-10, 1e-10 ] </tolerances>
+      </optimizer>
+    </motion>
+  </system>
+</simulation>

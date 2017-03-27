@@ -1,0 +1,90 @@
+
+ ____       ____       ____       ____
+/    \     /    \     /    \     /    \ 
+|  #################################  |
+\__#_/     \____/     \____/     \_#__/
+   #    _        _______  _____    #
+   #   (_)      |_   __ \|_   _|   #      -*-     Development version    -*-
+   #   __  ______ | |__) | | |     #
+   Y  [  ||______||  ___/  | |     #      A Python interface for (ab initio)
+  0 0  | |       _| |_    _| |_    #      (path integral) molecular dynamics.
+   #  [___]     |_____|  |_____|   #
+ __#_       ____       ____       _#__
+/  # \     /    \     /    \     / #  \
+|  #################################  |
+\____/     \____/     \____/     \____/
+
+    
+ # Initializing system object 
+ # Initializing simulation object 
+ # Initializer (stage 1) parsing positions object.
+ # Initializer (stage 1) parsing masses object.
+ # Initializer (stage 1) parsing labels object.
+ # Initializer (stage 1) parsing cell object.
+ !W! Momenta not specified in initialize. Will start with zero velocity if they are not specified in beads.
+Import of PyFFTW unsuccessful, using NumPy library instead
+ # Initializer (stage 2) parsing positions object.
+ # Initializer (stage 2) parsing masses object.
+ # Initializer (stage 2) parsing labels object.
+ # Initializer (stage 2) parsing cell object.
+ # i-PI loaded input file:  /home/gorg/i-pi-dev/examples/lammps/h2o-geop/input_lbfgs.xml
+ --- begin input file content ---
+<simulation mode="static" verbosity="high">
+    <output prefix="simulation_lbfgs">
+        <properties filename="out" stride="1">  [ step, potential ] </properties>
+        <trajectory filename="pos" stride="1"> positions </trajectory>
+    </output>
+    <total_steps> 1000 </total_steps>
+    <prng> <seed> 32342 </seed> </prng>
+    <ffsocket mode="unix" name="qtip4pf" pbc="false">
+        <address> driver  </address>
+    </ffsocket>
+    <system>
+        <initialize nbeads="1">
+        <file mode="xyz"> init.xyz </file>
+        </initialize>
+        <forces>
+        <force forcefield="qtip4pf"> </force>
+        </forces>
+        <motion mode="minimize">
+            <optimizer mode="lbfgs">
+                <tolerances>
+                    <energy> 1e-8 </energy>
+                    <force> 1e-8 </force>
+                    <position> 1e-8 </position>
+                </tolerances>
+            </optimizer>
+        </motion>
+    </system>
+</simulation>  ---  end input file content  ---
+Created unix socket with address driver
+ @ForceField: Starting the polling thread main loop.
+ @SOCKET:   Client asked for connection from . Now hand-shaking.
+ @SOCKET:   Handshaking was successful. Added to the client list.
+ @SOCKET: 17/03/27-13:03:32 Assigning [ none] request id    0 to client with last-id None (  0/  1 : )
+ @SOCKET: 17/03/27-13:03:32 Assigning [ free] request id    1 to client with last-id    0 (  0/  1 : )
+ @SOCKET: 17/03/27-13:03:32 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 0.000437477257463 1e-08
+MaxForces 0.0235548611586 1e-08
+Force Difference 0.100290335778 1e-08
+Position 0.0690101043531 1e-08
+ # Average timings at MD step       0. t/step: 3.16329e-02
+ @SOCKET: 17/03/27-13:03:32 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 0.000222133605655 1e-08
+MaxForces 0.00199402621694 1e-08
+Force Difference 0.0319084595345 1e-08
+Position 0.0236544914602 1e-08
+ # Average timings at MD step       1. t/step: 2.07369e-02
+ @SOCKET: 17/03/27-13:03:32 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 2.26409110563e-06 1e-08
+MaxForces 0.000676879013457 1e-08
+Force Difference 0.00316260163191 1e-08
+Position 0.00225360633416 1e-08
+ # Average timings at MD step       2. t/step: 1.80280e-02
+ @SOCKET: 17/03/27-13:03:32 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 6.101848138e-07 1e-08
+MaxForces 0.00077236472067 1e-08
+Force Difference 0.00039722662989 1e-08
+Position 0.00116397977743 1e-08
+ # Average timings at MD step       3. t/step: 3.17900e-02
+ @SOCKET: 17/03/27-13:03:33 
