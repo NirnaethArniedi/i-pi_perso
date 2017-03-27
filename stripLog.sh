@@ -2,9 +2,9 @@
 
 name=$1
 
-grep "Force Difference" $name | awk '{print $3}' > simu_forcesDiff.out
-grep "MaxForces" $name | awk '{print $2}' > simu_maxForces.out
-grep "Energy differences" $name | awk '{print $3}' > simu_energyDiff.out
-grep "Position" $name | awk '{print $2}' > simu_positions.out
+awk '/Force Differe/ {$1=$2=$NF="";$0=$0;$1=$1;print $0}' $name > simu_forcesDiff.out
+awk '/Forces/ {$1=$NF="";$0=$0;$1=$1;print $0}' $name > simu_maxForces.out
+awk '/Energy Diff/ {$1=$2=$NF="";$0=$0;$1=$1;print $0}' $name > simu_energyDiff.out
+awk '/osition/ {$1=$NF="";$0=$0;$1=$1;print $0}' $name > simu_positions.out
 
 exit 0

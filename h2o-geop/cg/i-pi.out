@@ -1,0 +1,217 @@
+
+ ____       ____       ____       ____
+/    \     /    \     /    \     /    \ 
+|  #################################  |
+\__#_/     \____/     \____/     \_#__/
+   #    _        _______  _____    #
+   #   (_)      |_   __ \|_   _|   #      -*-     Development version    -*-
+   #   __  ______ | |__) | | |     #
+   Y  [  ||______||  ___/  | |     #      A Python interface for (ab initio)
+  0 0  | |       _| |_    _| |_    #      (path integral) molecular dynamics.
+   #  [___]     |_____|  |_____|   #
+ __#_       ____       ____       _#__
+/  # \     /    \     /    \     / #  \
+|  #################################  |
+\____/     \____/     \____/     \____/
+
+    
+ # Initializing system object 
+ # Initializing simulation object 
+ # Initializer (stage 1) parsing positions object.
+ # Initializer (stage 1) parsing masses object.
+ # Initializer (stage 1) parsing labels object.
+ # Initializer (stage 1) parsing cell object.
+ !W! Momenta not specified in initialize. Will start with zero velocity if they are not specified in beads.
+Import of PyFFTW unsuccessful, using NumPy library instead
+ # Initializer (stage 2) parsing positions object.
+ # Initializer (stage 2) parsing masses object.
+ # Initializer (stage 2) parsing labels object.
+ # Initializer (stage 2) parsing cell object.
+ # i-PI loaded input file:  /home/gorg/i-pi-dev/examples/lammps/h2o-geop/input_cg.xml
+ --- begin input file content ---
+<simulation mode="static" verbosity="high">
+    <output prefix="simulation_cg">
+        <properties filename="out" stride="1">  [ step, potential ] </properties>
+        <trajectory filename="pos" stride="1"> positions </trajectory>
+    </output>
+    <total_steps> 1000 </total_steps>
+    <prng> <seed> 32342 </seed> </prng>
+    <ffsocket mode="unix" name="qtip4pf" pbc="false">
+        <address> driver  </address>
+    </ffsocket>
+    <system>
+        <initialize nbeads="1">
+        <file mode="xyz"> init.xyz </file>
+        </initialize>
+        <forces>
+        <force forcefield="qtip4pf"> </force>
+        </forces>
+        <motion mode="minimize">
+            <optimizer mode="cg">
+                <tolerances>
+                    <energy> 1e-8 </energy>
+                    <force> 1e-8 </force>
+                    <position> 1e-8 </position>
+                </tolerances>
+            </optimizer>
+        </motion>
+    </system>
+</simulation>  ---  end input file content  ---
+Created unix socket with address driver
+ @ForceField: Starting the polling thread main loop.
+ @SOCKET:   Client asked for connection from . Now hand-shaking.
+ @SOCKET:   Handshaking was successful. Added to the client list.
+ @SOCKET: 17/03/26-19:03:37 Assigning [ none] request id    0 to client with last-id None (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [ free] request id    1 to client with last-id    0 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:37 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 0.000660723963621 1e-08
+MaxForces 0.000947269058648 1e-08
+Force Difference 0.0654510512837 1e-08
+Position 0.0429296563665 1e-08
+ # Average timings at MD step       0. t/step: 2.95205e-01
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 2.88071928007e-06 1e-08
+MaxForces 0.000180057396828 1e-08
+Force Difference 0.00160805684627 1e-08
+Position 0.00633723862477 1e-08
+ # Average timings at MD step       1. t/step: 2.64553e-01
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 1.13785540585e-08 1e-08
+MaxForces 4.59869724277e-06 1e-08
+Force Difference 0.000259562179043 1e-08
+Position 0.00016419995251 1e-08
+ # Average timings at MD step       2. t/step: 4.75869e-01
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:38 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:39 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences 3.57820239096e-12 1e-08
+MaxForces 4.59763568212e-06 1e-08
+Force Difference 2.09648990399e-09 1e-08
+Position 8.24222867735e-09 1e-08
+SOFTEXIT CALLED FROM THREAD <_MainThread(MainThread, started 140646873409280)> Geometry optimization converged. Exiting simulation
+ !W! Soft exit has been requested with message: 'Geometry optimization converged. Exiting simulation'. Cleaning up.
+WRITING CHECKPOINT [('ffsocket', <ipi.inputs.forcefields.InputFFSocket object at 0x7feaced9fe90>), ('system', <ipi.inputs.system.InputSystem object at 0x7feaced9f810>)]
+Backup performed: RESTART -> #RESTART#3#
+ @SOCKET: Shutting down the driver interface.

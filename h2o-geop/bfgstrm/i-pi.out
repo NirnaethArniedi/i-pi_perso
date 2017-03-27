@@ -1,0 +1,127 @@
+
+ ____       ____       ____       ____
+/    \     /    \     /    \     /    \ 
+|  #################################  |
+\__#_/     \____/     \____/     \_#__/
+   #    _        _______  _____    #
+   #   (_)      |_   __ \|_   _|   #      -*-     Development version    -*-
+   #   __  ______ | |__) | | |     #
+   Y  [  ||______||  ___/  | |     #      A Python interface for (ab initio)
+  0 0  | |       _| |_    _| |_    #      (path integral) molecular dynamics.
+   #  [___]     |_____|  |_____|   #
+ __#_       ____       ____       _#__
+/  # \     /    \     /    \     / #  \
+|  #################################  |
+\____/     \____/     \____/     \____/
+
+    
+ # Initializing system object 
+ # Initializing simulation object 
+ # Initializer (stage 1) parsing positions object.
+ # Initializer (stage 1) parsing masses object.
+ # Initializer (stage 1) parsing labels object.
+ # Initializer (stage 1) parsing cell object.
+ !W! Momenta not specified in initialize. Will start with zero velocity if they are not specified in beads.
+Import of PyFFTW unsuccessful, using NumPy library instead
+ # Initializer (stage 2) parsing positions object.
+ # Initializer (stage 2) parsing masses object.
+ # Initializer (stage 2) parsing labels object.
+ # Initializer (stage 2) parsing cell object.
+ # i-PI loaded input file:  /home/gorg/i-pi-dev/examples/lammps/h2o-geop/input_bfgstrm.xml
+ --- begin input file content ---
+<simulation mode="static" verbosity="high">
+    <output prefix="simulation_bfgstrm">
+        <properties filename="out" stride="1">  [ step, potential ] </properties>
+        <trajectory filename="pos" stride="1"> positions </trajectory>
+    </output>
+    <total_steps> 1000 </total_steps>
+    <prng> <seed> 32342 </seed> </prng>
+    <ffsocket mode="unix" name="qtip4pf" pbc="false">
+        <address> driver  </address>
+    </ffsocket>
+    <system>
+        <initialize nbeads="1">
+        <file mode="xyz"> init.xyz </file>
+        </initialize>
+        <forces>
+        <force forcefield="qtip4pf"> </force>
+        </forces>
+        <motion mode="minimize">
+            <optimizer mode="bfgstrm">
+                <tolerances>
+                    <energy> 1e-8 </energy>
+                    <force> 1e-8 </force>
+                    <position> 1e-8 </position>
+                </tolerances>
+            </optimizer>
+        </motion>
+    </system>
+</simulation>  ---  end input file content  ---
+Created unix socket with address driver
+ @ForceField: Starting the polling thread main loop.
+ @SOCKET:   Client asked for connection from . Now hand-shaking.
+ @SOCKET:   Handshaking was successful. Added to the client list.
+ @SOCKET: 17/03/26-19:03:48 Assigning [ none] request id    0 to client with last-id None (  0/  1 : )
+ @SOCKET: 17/03/26-19:03:49 Assigning [ free] request id    1 to client with last-id    0 (  0/  1 : )
+Energy differences [ 0.00065905] 1e-08
+MaxForces 0.00212337540519 1e-08
+Force Difference 0.0685644651586 1e-08
+Position 0.0451546475294 1e-08
+ # Average timings at MD step       0. t/step: 2.92821e-02
+ @SOCKET: 17/03/26-19:03:49 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences [  2.40919825e-06] 1e-08
+MaxForces 0.000918585459227 1e-08
+Force Difference 0.00284583093976 1e-08
+Position 0.00201370599699 1e-08
+ # Average timings at MD step       1. t/step: 2.38712e-02
+ @SOCKET: 17/03/26-19:03:49 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences [  8.09214413e-07] 1e-08
+MaxForces 0.000839397986506 1e-08
+Force Difference 0.000881965444231 1e-08
+Position 0.0015653927559 1e-08
+ # Average timings at MD step       2. t/step: 1.89581e-02
+ @SOCKET: 17/03/26-19:03:49 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences [  1.01238953e-06] 1e-08
+MaxForces 0.00081802726254 1e-08
+Force Difference 0.000774663176509 1e-08
+Position 0.00286678976415 1e-08
+ # Average timings at MD step       3. t/step: 1.88859e-02
+ @SOCKET: 17/03/26-19:03:49 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences [  2.96160874e-07] 1e-08
+MaxForces 0.000323683993449 1e-08
+Force Difference 0.000606040030531 1e-08
+Position 0.00137744492978 1e-08
+ # Average timings at MD step       4. t/step: 2.10891e-02
+ @SOCKET: 17/03/26-19:03:49 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences [  3.65563022e-08] 1e-08
+MaxForces 3.93035584525e-05 1e-08
+Force Difference 0.000381666058632 1e-08
+Position 0.000425716864325 1e-08
+ # Average timings at MD step       5. t/step: 2.55530e-02
+ @SOCKET: 17/03/26-19:03:49 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences [  6.61121610e-10] 1e-08
+MaxForces 2.63935564207e-06 1e-08
+Force Difference 6.45323449278e-05 1e-08
+Position 7.27028242651e-05 1e-08
+ # Average timings at MD step       6. t/step: 2.98800e-02
+ @SOCKET: 17/03/26-19:03:49 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences [  7.37970485e-11] 1e-08
+MaxForces 1.47940109629e-07 1e-08
+Force Difference 3.8302459516e-06 1e-08
+Position 1.18122675383e-05 1e-08
+ # Average timings at MD step       7. t/step: 1.84669e-02
+ @SOCKET: 17/03/26-19:03:49 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences [  4.90309623e-12] 1e-08
+MaxForces 5.89709737243e-09 1e-08
+Force Difference 1.75664648806e-07 1e-08
+Position 4.30536197762e-07 1e-08
+ # Average timings at MD step       8. t/step: 2.08790e-02
+ @SOCKET: 17/03/26-19:03:49 Assigning [match] request id    1 to client with last-id    1 (  0/  1 : )
+Energy differences [  5.68293535e-12] 1e-08
+MaxForces 4.76524864212e-11 1e-08
+Force Difference 7.78445556056e-09 1e-08
+Position 9.12233154293e-09 1e-08
+SOFTEXIT CALLED FROM THREAD <_MainThread(MainThread, started 140206015399680)> Geometry optimization converged. Exiting simulation
+ !W! Soft exit has been requested with message: 'Geometry optimization converged. Exiting simulation'. Cleaning up.
+WRITING CHECKPOINT [('ffsocket', <ipi.inputs.forcefields.InputFFSocket object at 0x7f8429a2ad90>), ('system', <ipi.inputs.system.InputSystem object at 0x7f84299dcd10>)]
+ @SOCKET: Shutting down the driver interface.
